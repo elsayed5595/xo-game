@@ -1,0 +1,90 @@
+*{
+    padding: 0;
+    margin: 0;
+    font-family: system-ui;
+    box-sizing: border-box;
+}
+body{
+    background-color:whitesmoke;
+}
+/*start container*/
+.container{
+    width:300px;
+    text-align: center;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(80px,1fr));
+    gap: 10px;
+    column-gap: 10px;
+    color: white;
+    font-weight: 500;
+}
+header{
+    width: 30%;
+    text-align: center;
+    margin: auto;
+}
+ header .title{
+    background: #f25;
+    padding: 20px 0;
+    margin: 5px 0;
+}
+.title>span{
+    color: yellow;
+    font-size: x-large;
+}
+.title h3{
+    display: inline-block ;
+    color: white;
+    font-size: larger;
+}
+.container .square{
+    width: 80px;
+    height: 80px;
+    background: #f25;
+   font-size: 50px;
+   transition: .5s;
+}
+.square:hover{
+    background-color: rgba(0, 0, 0, 0.664);
+    cursor: pointer;
+  transform: scale(.9);
+}
+/*strat animation Game*/
+@keyframes colorChange {
+    0% {
+      background-color: #f25;
+    }
+    25% {
+      background-color: rgba(255, 34, 86, 0.945);
+    }
+    50% {
+      background-color: rgba(255, 34, 86, 0.822);
+    }
+    100% {
+      background-color: transparent;
+    }
+  }
+  
+
+  .colorChange {
+    animation: colorChange 1s ease-in-out normal;
+
+  }
+  /*end animation Game*/
+
+
+/*end container*/
+
+@media(max-width:767px){
+  .container{
+    margin-top:50%;
+  }
+  header{
+   padding-top: 80px;
+  }
+}
+
+
+
+
